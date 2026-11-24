@@ -1,0 +1,20 @@
+const namaKaryawan = "kammila";
+const gajiPokok = 50000000;
+const tunjangan = 1000000;
+const bonus = 500000;
+
+const hitungGaji = () => {
+  let totalPendapatan = gajiPokok + tunjangan + bonus;
+  let potongan = totalPendapatan * 5 / 100;
+  let gajiBersih = totalPendapatan - potongan;
+  return`
+Nama Karyawan   : ${namaKaryawan}
+Gaji Pokok      : Rp${gajiPokok.toLocaleString("id-ID")}
+Tunjangan       : Rp${tunjangan.toLocaleString("id-ID")}
+Bonus           : Rp${bonus.toLocaleString("id-ID")}
+Total Pendapatan: Rp${totalPendapatan.toLocaleString("id-ID")}
+Potongan (5%)   : Rp${potongan.toLocaleString("id-ID")}
+Gaji Bersih     : Rp${gajiBersih.toLocaleString("id-ID")}
+`;
+};
+console.log(hitungGaji());
